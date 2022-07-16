@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+        .row:nth-of-type(odd) {
+            background-color:#ccc;
+        }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/profile">Welcome Admin!</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<body>
+<br>
+<h1 class="center"><%=app[0].title%></h1>
+<div class="center" style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div style="width: 1000px; display: table-cell;">
+            <div class="center">
+                Operating System: <%=app[0].os%>
+                <hr class="solid">
+                Applicant Name: <%=app[0].name%>
+                <hr class="solid">
+                Email: <%=app[0].email%>
+                <hr class="solid">
+                Free or Paid: <%=app[0].price%>
+                <hr class="solid">
+                Funding: <%=app[0].fund%>
+                <hr class="solid">
+                School: <%=app[0].school%>
+                <hr class="solid">
+                Curriculum: <%=app[0].curriculum%>
+                <hr class="solid">
+                Justification: <%=app[0].justification%>
+                <hr class="solid">
+                Date: <%=app[0].date%>
+                <hr class="solid">
+                Notes: <%=app[0].notes%>
+                <hr class="solid">
+                Tested: <%=app[0].tested%>
+                <hr class="solid">
+                EULA Evaluation: <%=app[0].eula%>
+                <hr class="solid">
+                Approval: <%=app[0].approval%>
+                <hr class="solid">
+            </div>
+        </div>
+        <div style="display: table-cell;">
+            <div ><a target="_self" href="/addNotes/<%= app[0].id%>" target="_blank">Add Notes</a></div>
+            <br>
+            <div><a target="_self" href="/changeTested/<%= app[0].id%>" target="_blank">Change Tested</a></div>
+            <br>
+            <div><a target="_self" href="/changeEULA/<%= app[0].id%>" target="_blank">Change EULA Evaluation</a></div>
+            <br>
+            <div><a target="_self" href="/changeApproval/<%= app[0].id%>" target="_blank">Change Approval</a></div>
+            <br>
+            <div><a target="_self" href="/delete/<%= app[0].id%>" target="_blank">Delete</a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

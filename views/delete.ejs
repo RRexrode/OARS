@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+        .row:nth-of-type(odd) {
+            background-color:#ccc;
+        }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/profile">Welcome Admin!</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<body>
+<h1 class="center">Are you sure you want to delete this app?</h1>
+<br>
+<div class="center"><a target="_self" href="/yesDelete/<%= app[0].id%>" target="_blank">Yes</a></div>
+</body>
+</html>

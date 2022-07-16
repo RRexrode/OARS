@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+        .row:nth-of-type(odd) {
+            background-color:#ccc;
+        }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/profile">Welcome Admin!</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<body>
+<h1 class="center">Change Approval</h1>
+<form action="/submitApproval/<%=app[0].id%>" method="POST" class="center">
+    <select id="approval" name="approval" size="1" multipe>
+        <option value="approved">Approved</option>
+        <option value ="denied">Denied</option>
+    </select>
+    <hr class="solid">
+    <input type="submit" value="Submit">
+</body>
+</html>

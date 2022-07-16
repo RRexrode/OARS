@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+        .row:nth-of-type(odd) {
+            background-color:#ccc;
+        }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/profile">Welcome Admin!</a>
+    <a href="/logout">Logout</a>
+    <a class="navbar-brand" href="#" style="max-width: 30%;">
+        <img src="logo-mooresville.png" class="img-fluid">
+    </a>
+</div>
+
+<body>
+<br>
+
+<form method='GET' action="/search">
+    <div class="container">
+        <div class="right-pane">
+            <input type="text" id="name" name="name" />
+        </div>
+    </div>
+    <div class="submit-name">
+        <input type="submit" value="Search" />
+    </div>
+    </div>
+</form>
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class="column">APP TITLE</div>
+        <div class="column">NAME</div>
+        <div class="column">EMAIL</div>
+        <div class="column">SCHOOL</div>
+        <div class="column">DATE</div>
+    </div>
+    <hr class="solid">
+    <% data.forEach(entry => { %>
+        <div class="row">
+            <div class="column"><%= entry.title%></div>
+            <div class="column"><%= entry.name%></div>
+            <div class="column"><%= entry.email%></div>
+            <div class="column"><%= entry.school%></div>
+            <div class="column"><%= entry.date%></div>
+            <div class="column"><a target="_self"  href="/appProfile/<%= entry.id%>" target="_blank">View App</a></div>
+        </div>
+    <%}) %>
+</div>
+</body>
+</html>

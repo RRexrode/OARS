@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <style>
+        .row:nth-of-type(odd) {
+            background-color:#ccc;
+        }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/profile">Welcome Admin!</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<body>
+<h1 class="center">Add Note</h1>
+<form action="/submitNote/<%=app[0].id%>" method="POST" class="center">
+    <label for="note">Note:</label>
+    <textarea id="note" name="note" rows="4" cols="50" maxlength="255"></textarea>
+    <br>
+    <br>
+    <hr class="solid">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Application Request System</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<div class="topnav">
+    <a class="active"  href="/">Online Application Request System</a>
+    <a href="/login">Login</a>
+    <a class="navbar-brand" href="#" style="max-width: 30%;">
+        <img src="logo-mooresville.png" class="img-fluid">
+    </a>
+</div>
+
+<body>
+<br>
+<h1 class="center">Application Request Form</h1>
+<form action="/submitApp" method="POST" class="center">
+    <label for="os">Operating System:</label>
+    <select id="os" name="os" size="1" multipe>
+        <option value ="iOS">iOS</option>
+        <option value ="macOS">macOS</option>
+    </select>
+    <hr class="solid">
+    <label for="title">Software Title:</label>
+    <input id="title" name="title" type="text" aria-required="true">
+    <hr class="solid">
+    <label for="name">Your Name:</label>
+    <input id="name" name="name" type="text" aria-required="true">
+    <hr class="solid">
+    <label for="email">Your Email:</label>
+    <input id="email" name="email" type="text" aria-required="true">
+    <hr class="solid">
+    <label for="price">Free or Paid?:</label>
+    <select id="price" name="price" size="1" multipe>
+        <option value ="Free">Free</option>
+        <option value ="Paid">Paid</option>
+    </select>
+    <hr class="solid">
+    <label for="fund">If paid, funding source?</label>
+    <input id="fund" name="fund" type="text" aria-required="true">
+    <hr class="solid">
+    <label for="school">School:</label>
+    <select id="school" name="school" size="1" multipe>
+        <option value ="SES">SES</option>
+        <option value ="RRES">RRES</option>
+        <option value ="PVE">PVE</option>
+        <option value ="EMIS">EMIS</option>
+        <option value ="MIS">MIS</option>
+        <option value ="MMS">MMS</option>
+        <option value ="MHS">MHS</option>
+    </select>
+    <hr class="solid">
+    <label for="curriculum">Curriculum:</label>
+    <input id="curriculum" name="curriculum" type="text" aria-required="true">
+    <hr class="solid">
+    <br>
+    <label for="justification">Justification:</label>
+    <textarea id="justification" name="justification" rows="4" cols="50" maxlength="255"></textarea>
+    <br>
+    <br>
+    <hr class="solid">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
